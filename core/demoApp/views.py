@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.template import loader 
 
 # Create your views here.
@@ -34,6 +34,10 @@ def getform(request):
         id = request.POST['id']
         name = request.POST['name']
     return HttpResponse("Name:{}, UserID:{}".format(name, id))
+
+def login(request):
+    return render(request, "form.html")
+
 
 # def index(request): 
 #     template = loader.get_template('template/index.html') 
