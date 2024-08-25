@@ -21,6 +21,11 @@ def index(request):
 def pathview(request, name, id): 
     return HttpResponse("Name:{} UserID:{}".format(name, id)) 
 
+def qryview(request):
+    name = request.GET['name']
+    id = request.GET['id']
+    return HttpResponse("Name: {}, UserID: {}".format(name, id))
+
 # def index(request): 
 #     template = loader.get_template('template/index.html') 
 #     context={}  
