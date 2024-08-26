@@ -11,27 +11,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name="Principale",
-            fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
-                ("Qualification", models.CharField(max_length=50)),
-                ("email", models.EmailField(max_length=50)),
-                (
-                    "CollegId",
-                    models.OneToOneField(
-                        on_delete=django.db.models.deletion.CASCADE,
-                        to="demoApp.college",
-                    ),
-                ),
-            ],
-        ),
+        migrations.DeleteModel(models.Principale),
     ]

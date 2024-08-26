@@ -10,13 +10,5 @@ class Migration(migrations.Migration):
     dependencies = []
 
     operations = [
-        migrations.CreateModel(
-            name="college",
-            fields=[
-                ("collegeId", models.IntegerField(primary_key=True, serialize=False)),
-                ("name", models.CharField(max_length=50)),
-                ("strength", models.IntegerField()),
-                ("website", models.URLField()),
-            ],
-        ),
+        migrations.DeleteModel(models.college),
     ]

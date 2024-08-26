@@ -4,7 +4,7 @@ from django.db import models
 class college(models.Model):
     collegeId = models.IntegerField(primary_key = True)
     name = models.CharField(max_length = 50)
-    strength = models.IntegerField()
+    age = models.IntegerField()
     website = models.URLField()
 
 class Principale(models.Model):
