@@ -55,6 +55,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+
 ROOT_URLCONF = 'TokenAuthRcore.urls'
 
 TEMPLATES = [
@@ -83,6 +91,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+
+
+# WSGI_APPLICATION = 'TokenAuth.wsgi.application'
+ASGI_APPLICATION = 'TokenAuth.asgi.application'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND":
+      "channels.layers.InMemoryChannelLayer",
     }
 }
 
